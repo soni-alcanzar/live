@@ -1,4 +1,5 @@
 <style type="text/css">
+.bdr{border:1px solid red;}	
 .cat_bg_color {
     background: #00CDC6 none repeat scroll 0% 0%;
     cursor: pointer;
