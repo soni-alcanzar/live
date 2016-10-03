@@ -1,4 +1,3 @@
-
 <select  class="form-control reg_input" name="class_type_id[]" id="class_type_id">
 														<?php
 								                			foreach ($all_class_type as $key => $value_class_type) {
