@@ -1,0 +1,7 @@
+<?php  
+       echo $this->Element('admin_header');
+      
+       echo $this->fetch('content');
+       echo $this->Element('admin_footer');
+
+?>

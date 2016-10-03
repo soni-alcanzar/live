@@ -1,0 +1,151 @@
+<?php ?>
+<div id="fb-root"></div>
+
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=958960750891975";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+window.fbAsyncInit = function() {
+    FB.init({
+        appId   : '958960750891975',
+        oauth   : true,
+        status  : true, // check login status
+        cookie  : true, // enable cookies to allow the server to access the session
+        xfbml   : true // parse XFBML
+    });
+};
+
+function fb_login(){
+       $('.loader').show();
+    FB.login(function(response) {
+        
+        if (response.authResponse) {
+            access_token = response.authResponse.accessToken; //get access token
+            
+            user_id = response.authResponse.userID; //get FB UID
+  
+            FB.api('/me','GET',{"fields":"id,name,email,picture"}, function(response){
+               
+                $.post('socialLogin', {response : response, social_type: 'facebook'}, function(data){
+
+                $('.loader').hide();
+                  
+                    if(data==1){
+                      
+                        window.location.href = "dashboard";
+                    }else if(data == '900'){
+                        
+                         $('#myModal').modal({
+                                show: true,
+                                backdrop: 'static',
+                                keyboard: false
+                            }
+                        );
+                        document.getElementById('response_msg').style.display = 'block';
+                        $('#response_msg').html('<div class="alert alert-danger">Your account has not been activated yet. Please enter your activation code.</div>');
+                    }else if(data==2){
+                         window.location.href = "dashboard" ;
+                    }
+                });
+            });
+        }else{
+            console.log('User cancelled login or did not fully authorize.');
+        }
+    },{scope: 'public_profile,email'});
+}
+
+/*========================================================================Share===========================================================================================*/
+ function postToFeed(class_img,class_title,class_description) {
+           console.log(class_img);
+        // calling the API ...
+        var obj = {
+          method: 'feed',
+          redirect_uri:'https://www.facebook.com/cryswashington?fref=ts',
+          link:'https://developers.facebook.com/docs/reference/dialogs/',
+          picture:class_img,
+          name: class_title,
+          caption: 'Reference Documentation',
+          description: class_description
+        };
+
+        function callback(response) {
+         
+        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }
+/*===============================================================Share Transaction===========================================================================================*/
+ function postToFeed1(title,desc) {
+         
+        var obj = {
+          method: 'feed',
+          redirect_uri:'https://www.facebook.com/cryswashington?fref=ts',
+          link:'https://developers.facebook.com/docs/reference/dialogs/',
+         
+          name: title,
+          picture:'http://www.braingroom.com/img/logo.jpg',
+          caption: 'BrainGroom Transaction Details',
+          description:desc
+        };
+
+        function callback(response) {
+         
+        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+        }
+
+        FB.ui(obj, callback);
+      }  
+
+
+
+/*===================================================================END======================================================================================================*/
+
+   
+
+/*trainer fb login*/
+function trainer_fb_login(){
+    FB.login(function(response) {
+        if (response.authResponse) {
+            access_token = response.authResponse.accessToken; //get access token
+            user_id = response.authResponse.userID; //get FB UID
+            FB.api('/me','GET',{"fields":"id,name,email"}, function(response){
+                $.post('socialLogin', {response : response, social_type: 'facebook'}, function(data){
+                    alert(data);
+                    if(data==1){
+                        window.location.href = "registrationDetails" ;
+                    }else if(data == '900'){
+                        
+                         $('#myModal').modal({
+                                show: true,
+                                backdrop: 'static',
+                                keyboard: false
+                            }
+                        );
+                        document.getElementById('response_msg').style.display = 'block';
+                        $('#response_msg').html('<div class="alert alert-danger">Your account has not been activated yet. Please enter your activation code.</div>');
+                    }else if(data==2){
+                         window.location.href = "dashboard" ;
+                    }
+                });
+            });
+        }else{
+            console.log('User cancelled login or did not fully authorize.');
+        }
+    });
+}
+
+/*end*/
+
+(function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+}());   
+</script>

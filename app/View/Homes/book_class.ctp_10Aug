@@ -1,0 +1,213 @@
+<?php if($user_view['UserMaster']['user_type_id']=='1'){?>
+<style>
+.funmp1 {
+    width: 100%;
+  
+    background-image: url("<?php echo HTTP_ROOT;?>/img/Vendor/profile/<?php echo $user_view['UserMaster']['background_image'];?>");
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom:10px;
+}
+</style>
+<?php } else{?>
+<style>
+.funmp1 {
+    width: 100%;
+  
+    background-image: url("<?php echo HTTP_ROOT;?>/img/Buyer/profile/<?php echo $user_view['UserMaster']['background_image'];?>");
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom:10px;
+}
+</style>
+<?php }?>
+<style>
+.myprflbrd {
+    border: 0px solid #00477B !important;
+}
+.snr {
+    padding-top: 3px;
+}
+.edit-bg {
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+}
+.edit-photo{
+  color: #FFF;
+  font-family: 'os_bold';
+  font-size: 14px;
+  cursor: pointer;
+}
+.image_price12{
+
+   background-color: #54c0c1;
+    border-radius: 40%;
+    bottom: 239px;
+    height: 48px;
+    position: relative;
+    width: 90px;
+    margin-right:8px;
+}
+.ccc{
+     bottom: -10px;
+    font-size: 20px;
+    padding-left: 32px;
+    padding-top: 20px;
+    position: relative; 
+}
+.fa-camera-br {
+    color: white;
+    font-size: 24px;
+    position: relative;
+    right: 21px;
+    top: 57px;
+}
+
+#hideimge{
+display:none;
+}
+.user765 {
+    position: relative;
+    bottom: 90px;
+    left: 155px;
+}
+.najm1 {
+    position: relative;
+    bottom: 50px;
+    right: -5px;
+}
+.pimgtop{padding: 5px;
+}
+.booking{
+background-color:#00477B;
+color:#fff;
+border-radius:30%;
+}
+.clrdash123 {
+    background-color: #2BCDC1;
+    padding: 10px 0px;
+}
+</style>
+<div class="col-md-10 col-sm-9 col-xs-12 ruth6542 ruth654786 cstm_md9">
+	<div class="col-md-12 col-sm-12 col-xs-12 clrdash123 ruth1">
+        <div class="col-md-3 col-sm-3 col-xs-4 bar321 bar786">
+          <div><i class="fa fa-bars dshclr12" style="display:none;"></i><img src="<?php echo HTTP_ROOT;?>/img/profile_img/user.png" class="user432 dummy_user"><span class="dashbrd12 prf543">Provider Profile</span></div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-9 bar321 bar876 snr">
+            <div class="pull-right setnote">
+                <i class="fa fa-cog dshclr1"></i>
+                <span class="dashbrd1 grg">Settings</span>
+                <i class="fa fa-bell dshclr1" aria-hidden="true"></i>
+                <span class="dashbrd1 grg">Notification</span>
+                 <?php 
+                       $profile_img=$user_view['UserMaster']['profile_image'];
+                      
+                       $user_type_id=$user_view['UserMaster']['user_type_id'];
+                       //echo $user_type_id;
+                       //die;
+                       if($profile_img!='' and $user_type_id==1)
+                       {
+                        ?>
+                         <img src="<?php echo HTTP_ROOT;?>/img/Vendor/profile/<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+                         <?php
+                     }
+                     elseif($profile_img!='' and $user_type_id==2)
+                     {
+                        ?>
+                        <img src="<?php echo HTTP_ROOT;?>/img/Buyer/profile/<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+                        <?php
+                    }
+                    elseif($profile_img!='' and $user_type_id=='')
+                     {
+                        ?>
+                        <img src="<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+                        <?php
+                    }
+                 ?>
+                <span class="dropdown1">
+                    <span class="dashbrd1 grg1"><?php echo $user_view['UserMaster']['first_name'];?></span>
+                    <i class="fa fa-caret-down grg1 dshclr1" aria-hidden="true" id="nti"></i>
+                    <div class="dropdown-content1 logout">
+                        <p><a href="#" class="logout_a">Profile</a></p>
+                        <p><a href="#" class="logout_a">Change Password</a></p>
+                        <p><a href="<?php echo HTTP_ROOT;?>/homes/logout" class="logout_a">Logout</a></p>
+                    </div>
+                </span>
+                <br>
+                <!--<span class="vendor">Vendor</span>-->
+            </div>
+        </div>
+    </div>
+   
+    <!-- work of this page start -->
+    <div class="col-md-12 col-sm-12 col-xs-12 status-book">
+      <div class="col-md-12 col-sm-12 col-xs-12 book_status">
+        Class Booking Status
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 name-pad12">
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Class Name
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath">
+              Hath Yoga for Weight Loss in 10 Days 
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Booking Id
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath1">
+              123456
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Booking Date & Time:
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath">
+              12 April 2016 to 1 April 2016
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Ticket Price
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath1">
+              Rs.200/
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Total Seats
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath">
+              60
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Booked Seats
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath1">
+              30
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r name-brd book_class_bg_clr">
+            <div class="col-md-4 col-sm-5 col-xs-12 name-class">
+              Free Seats
+            </div>
+            <div class="col-md-8 col-sm-7 col-xs-12 name-hath">
+              30
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <!-- work of this page end -->
+
+
+</div>

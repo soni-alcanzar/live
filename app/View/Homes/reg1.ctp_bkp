@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login Form</title>
+    
+    <!-- core CSS -->
+    <?php 
+            echo $this->Html->css('front/bootstrap');
+            echo $this->Html->css('front/bootstrap.min');?>
+ <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+            <?php
+            echo $this->Html->css('front/brain');
+            echo $this->Html->css('front/check_box');
+            echo $this->Html->css('front/style1');
+            echo $this->Html->css('front/style_g');
+          echo $this->Html->script('front/jquery.min');
+            ?>
+           
+            
+<style>
+ option:hover, 
+         option:focus, 
+        option:active, 
+         option:checked
+            {
+                background: linear-gradient(#33B9B4,#33B9B4);
+                background-color: #33B9B4; /* for IE */
+            }
+ option:hover, 
+         option:focus, 
+        option:active, 
+         option:checked
+            {
+                background: linear-gradient(#33B9B4,#33B9B4);
+                background-color: #33B9B4; /* for IE */
+            }
+</style>            
+           
+
+    
+    
+    
+</head><!--/head-->
+
+<body>
+
+<div class="container-fluid padd_l_r">
+    <div class="row-fluid b_1_icon">
+        <div class="container ">
+        <!-- **********icon********** -->
+            <!-- <div class="col-md-12 col-sm-12 col-xs-12 "> -->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <a href="http://amazer.co.in/brgrooms/"><img src="<?php echo HTTP_ROOT;?>/img/logo.jpg" style="width:210px;" class="img-responsive b_1_img"></a>
+                </div>
+            <!-- </div> --> 
+        </div>
+    </div>
+
+	<!-- **********icon********** -->
+	<!-- **********registration head************ -->
+	<div class="row-fluid b_1_reg">
+		<div class="container ">
+			<!-- <div class="col-md-12 col-sm-12 b_1_reg"> -->
+			<div class="col-md-12  col-sm-12">
+				<div class="col-md-6 col-sm-6 pull-left b_1_rgh"><h4>REGISTRATION</h4></div>
+				<div class="col-md-6 col-sm-6">
+					<div class="pull-right blfthd">
+						<label class="b_1_home"><a href="http://amazer.co.in/brgrooms/" class="b_11_home">Home</a></label>
+						<label class="b_1_angle"><i class="fa fa-angle-left" aria-hidden="true"></i></label>
+						<label class="b_1_rgtn">Registration</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- **********registration head************ -->
+	<!-- **********whole body**************** -->
+	<div class="row-fluid b_1_body b_1_lgnbg1">
+		<div class="container ">	
+				<!-- **********whole body**************** -->
+				<!-- <div class="col-md-12 col-sm-12 b_1_body"> -->
+				<!-- ********************border & heading****************** -->
+					<div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 br_crte">
+						<div class="row">
+							<center>
+								<h2>Create An Account</h2>
+								<img src="<?php echo HTTP_ROOT;?>/img/underline.png" class="bdrline img-responsive">
+							</center>
+						</div>
+					</div>	
+					<!-- ********************border & heading****************** -->
+				<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 b_1_field">
+					<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+						<h2 class="b_step">Step 1</h2>
+						<!-- ***************input field 0*************** -->
+						<div class="form-group">
+								  <label for="usr">&nbsp;</label>
+								  <input type="text" class="form-control reg_input" value="<?php echo $data['fb_name']; ?>" id="usr" placeholder="Name">
+						</div>
+						<!-- ***************input field 0*************** -->
+						<!-- ***************input field 1*************** -->
+						<div class="form-group">
+								  <label for="usr">&nbsp;</label>
+								  <input type="text" class="form-control reg_input" id="usr" value="<?php echo $data['email'] ?>" placeholder="Email Id">
+						</div>
+						<!-- ***************input field 1*************** -->
+						<!-- ***************input field 2*************** -->
+						<div class="form-group">
+								  <label for="usr">&nbsp;</label>
+								  <input type="text" class="form-control reg_input" id="usr" placeholder="Password">
+						</div>
+						<!-- ***************input field 2*************** -->
+						<!-- ***************input field 3*************** -->
+						<div class="form-group br_state">
+								  <label for="usr">&nbsp;</label>
+								  <input type="text" class="form-control reg_input" id="usr" placeholder="Mobile No">
+						</div>
+						<!-- ***************input field 3*************** -->
+						<!-- ***************select field 1************** -->
+						<div class="form-group ">
+							<?php echo $this->Form->input('city_id', array('type'=>'select','label' => false,'div'=>false, 'class' => 'form-control reg_input','id'=>'city_id','options'=>$city,'option_selected'=>$city['2']));?>
+							
+							<span class="carimg"><img src="<?php echo HTTP_ROOT;?>/img/caret.png"></span>
+						</div>
+						<!-- ***************select field 1************** -->
+						<!-- ***************register field 2************ -->
+						<div class="form-group ">
+							<input type="text" name="product" list="productName" class="form-control reg_input" placeholder="Locality" />
+							
+								<datalist id="productName">
+							    <option value="Pen">Pen</option>
+							    <option value="Pencil">Pencil</option>
+							    <option value="Paper">Paper</option>
+							</datalist>
+							
+							<span class="carimg"><img src="<?php echo HTTP_ROOT;?>/img/caret.png"></span>
+						</div>
+						<!-- ***************register field 2************ -->
+						<!-- ***************register field 3************ -->
+						<div class="form-group ">
+							<?php echo $this->Form->input('city_id', array('type'=>'select','label' => false,'div'=>false, 'class' => 'form-control reg_input','id'=>'city_id','options'=>$category,'option_selected'=>$category['1']));?>
+							<span class="carimg"><img src="<?php echo HTTP_ROOT;?>/img/caret.png"></span>
+						</div>
+						<!-- ***************register field 3************ -->
+						<!-- ***************radio button 1 -->
+						<div class="form-group b_1_radio">
+							<div class="row">
+								<div class="col-md-4 col-sm-6 col-xs-6 b_1_pd b_1_flt">
+								     <input type="radio" checked name="radio-group" class="radio-custom" id="radio-1">
+								     <label class="radio-custom-label" for="radio-1"><span class="b_1_check">Buyer</span></label>
+								</div>
+								<div class="col-md-8 col-sm-6 col-xs-6 b_1_pd b_1_flt">
+								    <input type="radio"  name="radio-group" class="radio-custom" id="radio-2">
+								    <label class="radio-custom-label" for="radio-2"><span class="b_1_check">Vendor</span></label>
+							     </div>
+							</div>	
+						</div>
+						<!-- ***************radio button 1 -->
+						<!-- **************button************* -->
+						<div class="form-group">
+								<div class=" col-sm-12 b_butt_pad b_1_pdnxt pull-right">
+									<div class=" pull-right padd_l_r">
+								    	<a href="reg4"><button class="btn br_login2 next1" name="next1">Next<i class="bangl fa fa-angle-right" aria-hidden="true"></i></button></a>
+								    	<a href="reg2"><button class="btn br_login2 next2" name="next2" style="display:none;">Next<i class="bangl fa fa-angle-right" aria-hidden="true"></i></button></a>
+							  		</div>
+							  	</div>
+						</div>
+						<!-- **************button************* -->
+					</div>
+				</div>
+		</div>	
+		<!-- </div> -->
+	</div>	
+
+	<!-- *********************footer******************** -->
+	<?php echo $this->element('homes_footer');?>
+		<!-- *********************footer******************** -->
+	<!-- **********whole body**************** -->
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="assets/js/bootstrap.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	$("#city_id").on('change',function(){
+      
+	     var city_id=$(this).val();
+	     
+	    $('.loader').show();
+	      $.ajax({ 
+	        url: '<?php echo HTTP_ROOT;?>/Homes/getLocality/'+city_id,
+	        type: 'post',
+	         success: function(output) {
+	         	$('.loader').hide();
+	           if(output=='0'){
+	           	alert('comming Soon');
+	           }
+			var result = jQuery.parseJSON(output);
+			$('#productName').empty();
+			$.each(result,function(e,temp_obj){
+				$('#productName').append('<option value='+temp_obj.name +'>'+temp_obj.name +'</option>');
+			  console.log( temp_obj.id + ": " + temp_obj.name );
+			});
+	               
+	                
+	                
+	                 
+	              }
+	        });
+	  });
+      	$('.next2').hide();
+        $('.next1').show();
+	        $("#radio-2").click(function(){
+	          // Holds the product ID of the clicked element
+	          $('.next1').hide();
+	          $('.next2').show();
+	        });
+	        
+	        $("#radio-1").click(function(){
+	          // Holds the product ID of the clicked element
+	          $('.next2').hide();
+	          $('.next1').show();
+	        });  
+
+    });
+</script>

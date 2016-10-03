@@ -1,0 +1,109 @@
+<?php
+
+class AdminsController extends AppController {
+
+	var $uses = array( 'Admin');
+	 var $components = array('Paginator');
+
+    public function checkUser(){
+    	if(!$this->Session->check('Admin')){
+    		$this->redirect(array('controller'=>'Admins','action'=>'login'));
+    	}
+    }
+
+
+     public function index() {
+    	$this->checkUser();
+    	$this->layout="admin_layout";
+       
+
+ 	  }
+    public function Dashboard(){
+      $this->checkUser();
+      $this->layout="admin_layout";
+    }
+      public function login(){
+
+    $this->layout=null; 
+
+    if ($this->request->is('post')) {
+      if(isset($this->data['Admins']['username'])&&isset($this->data['Admins']['password'])){
+        $uname = $this->data['Admins']['username'];
+        $password = $this->data['Admins']['password'];
+        $count=$this->Admin->find('first',array('conditions'=>array('Admin.username'=>$uname,'Admin.password'=>md5($password))));
+        if(!empty($count)){
+          $this->Session->write('Admin',$count['Admin']['id']);
+          //$this->Session->setFlash(__('Welcome  '.$count['Admin']['username']));
+          $this->redirect(array('controller'=>'Admins', 'action'=>'index'));
+        } else {
+          $this->Session->setFlash('<div class="alert alert-danger">Invalid username or password</div>');
+        }
+      }else{
+        $this->Session->setFlash('<div class="alert alert-danger">Please fill the  username or password</div>');  
+      }
+    }
+  }
+public function ChangePassword(){
+    $this->checkUser();
+    $this->layout="admin_layout";
+    $id=$this->Session->read('Admin');
+
+    $validate=0;
+    if($this->request->is('post')){
+        $data=$this->data;
+       if(empty($data['ChangePassword']['password'])){
+        $this->requestAction(array('controller'=>'Cpanels', 'action'=>'generateMessages'),
+            array('pass'=>array('101','0')));
+        $validate++;         
+       }
+       else if(empty($data['ChangePassword']['new_password'])){
+        $this->requestAction(array('controller'=>'Cpanels', 'action'=>'generateMessages'),
+            array('pass'=>array('102','0')));
+        $validate++;         
+       }
+       else if(empty($data['ChangePassword']['confirm_password'])){
+        $this->requestAction(array('controller'=>'Cpanels', 'action'=>'generateMessages'),
+            array('pass'=>array('103','0')));
+        $validate++;         
+       }
+       
+       else{
+        if($validate=='0'){
+            $res=$this->Admin->find('first',array('conditions'=>array('id'=>$id,'password'=>md5($data['ChangePassword']['password']))));
+            if(empty($res)){
+                $this->requestAction(array('controller'=>'Cpanels', 'action'=>'generateMessages'),
+                    array('pass'=>array('345','0')));  
+            }
+            else{
+                if($data['ChangePassword']['new_password']!=$data['ChangePassword']['confirm_password']){
+                    $this->requestAction(array('controller'=>'Cpanels', 'action'=>'generateMessages'),
+                    array('pass'=>array('104','0')));  
+                 }
+                 else{
+                    $dataArray['password']=md5($data['ChangePassword']['new_password']);
+                    $dataArray['id']=$res['Admin']['id'];
+                    
+                    $this->Admin->save($dataArray);
+                    $this->requestAction(array('controller'=>'Cpanels', 'action'=>'generateMessages'),
+                    array('pass'=>array('711','1')));
+                   $this->redirect($this->referer());
+                }
+            }
+        }        
+
+    }
+  }
+}
+
+  public function logout(){
+    $this->autoRender = false;
+    $this->Session->delete('Admin');
+    $this->redirect(array('controller'=>'Admins','action'=>'login'));
+    
+  }
+    
+    
+
+}
+
+?>

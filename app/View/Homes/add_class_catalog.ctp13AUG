@@ -1,0 +1,264 @@
+<style type="text/css">
+  .butt_dollar-br {
+    position: relative;
+    top: -171px;
+    left: 31%;
+    background: #30AFA8;
+    color: #FFF !important;
+    border-radius: 15px;
+  }
+
+  .flexible-fixed-fun {
+    color: #FFF;
+    background-color: #00CDC6;
+    font-family: OS_regular;
+    padding: 3px 6px;
+    z-index: 1050;
+    position: absolute;
+    border-radius: 25px;
+    top: 9px;
+    left: 8px;
+    width: 69px;
+    height: 28px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.image_price12-fun {
+    background-color: #00CDC6;
+    margin-top: 10px;
+    padding: 3px 6px;
+    z-index: 1050;
+    text-align: center;
+    position: absolute;
+    float: right;
+    margin-left: 174px;
+}
+.pull-right-fun {
+    float: right !important;
+}
+
+</style>
+<div class="col-md-10 col-sm-9 col-xs-12 ruth6542 ruth654786">
+    <div class="col-md-12 col-sm-12 col-xs-12 sr_pv_padding_lr" style="background:#fff;">
+        <div class="col-md-12 col-sm-12 col-xs-12 clrdash123 ruth1">
+            <div class="col-md-4 col-sm-4 col-xs-4 bar321 bar786">
+                <div>
+                  <i class="fa fa-bars dshclr12" style="display:none;"></i>
+                  <img src="<?php echo HTTP_ROOT;?>/img/profile_img/user.png" class="user432">
+                  <span class="dashbrd12 prf543">Add Class To Catalogue</span>
+                </div>
+            </div>
+           
+          <div class="col-md-8 col-sm-8 col-xs-8 bar321 bar876">
+            <div class="pull-right setnote">
+              <i class="fa fa-cog dshclr1"></i>
+              <span class="dashbrd1 grg">Settings</span>
+              <i class="fa fa-bell dshclr1" aria-hidden="true"></i>
+              <span class="dashbrd1 grg">Notification</span>
+              <?php   
+                       $profile_img=$user_view['UserMaster']['profile_image'];
+                      
+                       $user_type_id=$user_view['UserMaster']['user_type_id'];
+                      $user_pic1 = substr($profile_img,0,4);
+                         if($user_pic1 == 'http'){ ?>
+                           
+                       
+                          <img src="<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+
+                          <?php } 
+                               else if($profile_img!='' and $user_type_id==1) {  ?>
+                         <img src="<?php echo HTTP_ROOT;?>/img/Vendor/profile/<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+
+                        <?php }elseif($profile_img!='' and $user_type_id==2){  ?>
+
+                        <img src="<?php echo HTTP_ROOT;?>/img/Buyer/profile/<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+                         <?php }elseif($profile_img!='' and $user_type_id==''){ ?>
+
+                        <img src="<?php echo $profile_img; ?>" class="georgeimg prflimg"> 
+                        <?php
+                    }
+                   
+
+                 ?>
+              <span class="dropdown1">
+                <span class="dashbrd1 grg1"><?php echo $user_view['UserMaster']['first_name'];?></span>
+                <i class="fa fa-caret-down grg1 dshclr1" aria-hidden="true" id="nti"></i>
+               <div class="dropdown-content1 logout">
+                  <p><a href="<?php echo HTTP_ROOT;?>/Homes/myProfile" class="logout_a">Profile</a></p>
+                  <p><a href="<?php echo HTTP_ROOT;?>/Homes/changepassword" class="logout_a">Change Password</a></p>
+                  <p><a href="<?php echo HTTP_ROOT;?>/Homes/logout" class="logout_a">Logout</a></p>
+                </div>
+              </span><br>
+             <!--<span class="vendor">Vendor</span>-->
+            </div>
+          </div>
+        </div>
+
+        <?php 
+        //echo "<pre>";
+        //print_r($add_class_list);
+        //echo "</pre>"; 
+        ?>
+        <!-- ************work************** -->
+        <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r add_top">
+               <section>
+                    <?php foreach ($add_class_list as $key => $value_class) {
+
+                      $class_title      =  $value_class['VendorClasse']['class_topic'];
+                      $place            =  $value_class['VendorClasse']['location'];
+                      $class_photo      =  $value_class['VendorClasse']['upload_class_photo'];
+                      $class_duration   =  $value_class['VendorClasse']['class_duration'];
+                      $price_per_head   =  $value_class['VendorClasse']['price_per_head'];
+
+                      if($class_photo=='')
+                      {
+                        $classimg='defult_pic.png';
+                      }
+                      else
+                      {
+                        $classimg=$class_photo;
+                      }
+                    
+                    ?>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padd_l_r add_top1 ">
+                            <div class="grid1 gridworkshopsbg1">
+                                <div class="view1 view-first">
+                                    <div class="index_img">
+                                       <div class="image_price12-fun" style="color:white">₹ 4</div>
+                                       
+                                        <img src="<?php echo HTTP_ROOT; ?>/img/Vendor/class_image/<?php echo $classimg;?>">
+                                        <!-- <button class="btn butt_dollar-br">&#8377;<?php echo $price_per_head; ?></button> -->
+                                        
+                                         <div class="flexible-fixed-fun">Flexible</div>
+                                         
+                                         
+                                    </div>                 
+                                </div>                           
+                                <div class="golden_br">
+                                    <h4><?php echo $class_title; ?></h4>
+                                    <!-- <p>PLACE :<?php //echo $place; ?></p> -->
+                                    <p>Duration : <?php echo $class_duration; ?></p>
+                                   
+                                    <!-- <h6>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </h6> -->
+                                    <button class="btn" tabindex="0">Send Request</button>
+                                </div>
+                                <div class="add_class">
+                                    <p>Request Status:Added To Catalogue</p>
+                                </div>                               
+                            </div>
+                        </div>
+                   <?php } ?>
+               </section>
+        </div>
+        <!-- ************work1************** -->
+    </div>
+
+
+    
+</div>
+
+ 
+
+<script type="text/javascript">
+      $(document).ready(function(){
+        //alert('najmu');
+
+          $('#organization').hide();
+          $('#individual').show(); 
+
+          $("#radio-1").click(function(){
+          //alert('najmu');
+          //Holds the product ID of the clicked element
+          $('#organization').hide();
+          $('#individual').show();
+        });
+        $("#radio-2").click(function(){
+          // Holds the product ID of the clicked element
+          $('#individual').hide();
+          $('#organization').show();
+        });        
+  $('#datepicker').click(function(){
+   
+    /* $( "#datepicker").datepicker();*/
+    $( "#datepicker" ).datepicker({yearRange:'1900:2030',maxDate:0,changeYear: true, changeMonth: true });
+
+     $( "#datepicker").datepicker("show");
+  })
+   $('#datepicker').keypress(function(){
+     $( "#datepicker" ).datepicker();
+     $( "#datepicker" ).datepicker("show");
+  });
+
+
+    $("#file-upload").on('change',function(){
+        var a = $(this).val();      
+        $('#upload_photo').val(a);
+    });
+
+    $("#img_click").on('click',function(){
+        $('#file-upload').click();
+    });
+
+    $("#file-upload1").on('change',function(){
+      var a = $(this).val();
+    
+      $('#upload_photo1').val(a);
+    });
+
+    $("#img_click1").on('click',function(){
+      $('#file-upload1').click();
+    });
+
+
+    $("#file-upload2").on('change',function(){
+        var a = $(this).val();      
+        $('#upload_photo2').val(a);
+    });
+
+    $("#img_click2").on('click',function(){
+        $('#file-upload2').click();
+    });
+
+    $("#file-upload3").on('change',function(){
+      var a = $(this).val();
+    
+      $('#upload_photo3').val(a);
+    });
+
+    $("#img_click3").on('click',function(){
+      $('#file-upload3').click();
+    });
+
+  
+
+});
+
+
+// $(document).ready(function () {
+//  alert('hhh');
+//     $('#myModal2').dialog({
+//         modal: true,
+//         autoOpen: false
+//     });
+
+//     $('select').change(function () {
+//         if ($(this).val() == "1") {
+//             $('#myModal2').dialog('open');
+//         }
+//     });
+
+// });
+</script>
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+<!-- <div class="col-md-12 col-sm-12 col-xs-12 single-slide_br banner_six">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <center>
+        <a href="#" class="more_vw">And Many More</a>
+      </center>
+    </div>
+</div> -->
+<div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+  <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+    
+      <img src="<?php echo HTTP_ROOT;?>/img/profile_img/explore_ban.jpeg" class="img-responsive" alt="">
+   
+  </div>
+</div>  
+<div class="col-xs-12 col-sm-12  col-md-12 col-lg-offset-1 col-lg-10" >
+          <div class="container-fluid  padd_l_r" style="">            
+<div class="col-md-12 col-sm-12 col-xs-12" style="">  </div>   
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r br_srch_act">
+            <div class="col-md-7 col-sm-7 col-xs-6 left-box-content">
+                <div class="col-md-4 col-sm-3 col-xs-12 padd_l_r find-near-div find-near-field">
+                  <center>
+                    <img class="globgreen" src="<?php echo HTTP_ROOT?>/img/glob.png">
+                    <img class="globblack" src="<?php echo HTTP_ROOT?>/img/globblack.png">
+                    <span>Find classes near by you </span>
+                   </center>
+                    <hr class="near-border nearr-border active">
+                    <center>
+                      <img class="caret-border-img" src="<?php echo HTTP_ROOT;?>/img/caret.png">
+                    </center>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 padd_l_r find-people-near-div find-people-near find-near-field ">
+                  <center>
+                    <img class="handblack" src="<?php echo HTTP_ROOT?>/img/handblack.png">
+                    <img class="handgreen" src="<?php echo HTTP_ROOT?>/img/handgreen.png">
+                    <span>Find people near by you </span>
+                  </center>
+                  <hr class="near-border near-border1 nearr-border1">
+                  <center>
+                    <img class="caret-border-img1" src="<?php echo HTTP_ROOT;?>/img/caret.png">
+                  </center>
+                </div> 
+                 <div class="col-md-4 col-sm-4 col-xs-12 padd_l_r find-people-near find-people-near-div-last find-near-field">
+                  <center>
+                    <img class="manblack" src="<?php echo HTTP_ROOT?>/img/manblack.png">
+                    <img class="mangreen" src="<?php echo HTTP_ROOT?>/img/mangreen.png">
+                    <span>   Find groups near by you </span>
+                   </center>
+                  <hr class="near-border nearr-border2">
+                  <center>
+                    <img class="caret-border-img2" src="<?php echo HTTP_ROOT;?>/img/caret.png">
+                  </center>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-6 padd_l_r search-box-content">
+              <div class="input-group srch_adon_brd">
+                <input type="text" class="form-control br_inpt_radius" placeholder="Search for short classes &  activities">
+                <span class="input-group-btn">
+                  <button class="btn btn-default br_inpt_radius srch_adon" type="button">Search</button>
+                </span>
+              </div>
+            </div>  
+          </div>  
+          <!-- Furry Teddy Bear -->
+
+          <!-- *************tab head*************** -->
+          
+          <div class="col-md-12 col-sm-12 col-xs-12 tab_head padd_l_r sr_2605_03_padding nav nav-tabs list_220" style="">
+            <div class="col-xs-12 col-sm-12 sr_2605_03_padding padd_l_r ">
+              <div class="col-md-2 col-sm-2 col-xs-3 padd_l_r section-heading-box">
+                <span>Explore</span>
+              </div>
+              <div class="col-md-10 col-sm-10 col-xs-9 heading-segment sr_2605_03_padding  sr_2705_bdr3 padd_l_r">
+                    <div class="row">
+                      <div class="col-md-3 col-sm-3 col-xs-3 padd_l_r two_seg segment-box-content segment-box-content-first segment-box-content-first1">
+                        <a href="#">Fun & Recreation</a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3 padd_l_r two_seg segment-box-content" >
+                        <a href="#arts" >Informative & Motivational</a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3 padd_l_r two_seg segment-box-content segment-box-content-second">
+                        <a href="#">Kids & Teens</a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3 padd_l_r three_seg segment-box-content segment-box-content-last">
+                        <a href="#">Educational & Skill Development</a>
+                      </div>
+                    </div>
+                    <div class="row seg_brd_tp second-segment-box">
+                      <div class="col-md-3 col-sm-3 col-xs-3 padd_l_r two_seg segment-box-content segment-box-content-first segment-box-content-first2">
+                        <a href="#">Health & Wellness</a>
+                      </div>
+                      <div class="col-md-3 col-sm-3 col-xs-3 padd_l_r two_seg segment-box-content segment-box-content-lastone">
+                        <a href="#">Home Maintenance</a>
+                      </div>
+                      
+                    </div>
+                    <!-- <div class="row seg_brd_tp">
+                      <div class="col-md-3 col-sm-3 col-xs-2 padd_l_r two_seg">India Indigenous</div>
+                    </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r br_srch_act">
+            <div class="col-md-3 col-sm-3 col-xs-12  padd_l_r location-box-seerch" >
+              <form class="form-search" method="post" id="s" action="/">
+                <div class="input-append">
+                    <input type="text" class="input-medium search-query-box" name="s" placeholder="Search" value="">
+                    <input type="hidden" name="submit" value="submit">
+                </div>
+            </form>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 change-box-btn">
+              <button type="button" class="btn btn-success locality-button"><span>Change Locality & Search</span></button>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 yes-box-seerch" style="padding-right:0px;">
+              <form class="form-search" method="post" id="s" action="/">
+                <div class="input-append">
+                    <input type="text" class="input-medium yes-query-box" name="s" placeholder="Yes" value="">
+                    <input type="hidden" name="submit" value="submit">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 gps-box-div">
+              <button type="button" class="btn btn-success locality-button"><span>Use GPS to Set exact Location & Search</span></button>
+            </div>
+          </div>
+          <!-- *************tab head*************** -->
+         
+        
+         <div class="col-md-12 col-sm-12 col-xs-12 "> &nbsp; </div>
+         
+          <!-- google map code -->
+          <div class="col-md-12 col-sm-12 col-xs-12 sr_2605_03 padd_l_r"> 
+              <div id="googleMap" class="google-map-div" style="width:100%;height:600px;"></div>
+          </div> 
+          <div class="col-md-12 col-sm-12 col-xs-12 "> &nbsp; </div>
+          <!-- google map code / -->
+          <!-- <div class="col-md-12 col-sm-12 col-xs-12 sr_0106_div_a_class"> 
+              <center><button type="botton" class="btn btn-primary sr_0106_gift_a_class">Gift A Class</button></center>
+          </div> -->
+        
+          </div>
+        </div>
+

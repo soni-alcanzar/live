@@ -1,0 +1,405 @@
+<div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+  <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+  <?php
+    if($catalog_id==1)
+    {
+      $catimg_banner='catelogue_banner1.jpg';
+    }
+    else if($catalog_id==2){
+
+      $catimg_banner='catelogue_banner2.jpg';
+    }
+    else if($catalog_id==3){
+
+        $catimg_banner='catelogue_banner3.jpg';
+    }
+    else if($catalog_id==4){
+
+        $catimg_banner='catelogue_banner4.jpg';
+    }
+    else if($catalog_id==5){
+
+      $catimg_banner='catelogue_banner5.jpg';
+    }
+    else if($catalog_id==6){
+
+      $catimg_banner='catelogue_banner6.jpg';
+    }
+    
+  ?>
+    <a href="#">
+     
+    <img src="<?php echo HTTP_ROOT;?>/img/catalogue_image/<?php echo $group_image;?>" class="img-responsive img_h_cat_datail" alt="category_image" style="">
+    </a>
+  </div>
+</div>  
+<div class="col-xs-12 col-sm-12  col-md-12 col-lg-offset-1 col-lg-10" >
+        <div class="container-fluid  padd_l_r" style="">
+            <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r br_srch_act">
+              <div class="col-md-7 col-sm-7 col-xs-6"></div>
+              <div class="col-md-5 col-sm-5 col-xs-6 padd_l_r inpt_adon">
+                <div class="input-group srch_adon_brd">
+                  <input type="text" class="form-control br_inpt_radius" placeholder="Search for short classes &  activities">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default br_inpt_radius srch_adon" type="button">Search</button>
+                  </span>
+                </div>
+              </div>  
+            </div>  
+        </div>
+          <!-- *************tab head*************** -->
+          <!-- **************form update*********** -->
+        <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r tp_br">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 padd_l_r">
+              <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+                <div class="col-md-12 col-sm-12 col-xs-12 fltrdv">
+                  <div class="filter_br">
+                    Filter
+                  </div>
+                </div>
+              </div>  
+              <div class="col-md-12 col-sm-12 col-xs-12 fldv1 list_filter">
+                <div class="form-group mrg_btm">
+                  <input class="form-control crt_br" id="usr reg_input" type="text" value="Start Date">
+                  <span class="carimg_br12"><img src="<?php echo HTTP_ROOT;?>/img/cal.png"></span>
+                </div>
+                <div class="form-group mrg_btm">
+                  <select class="form-control crt_br" id="select">
+                    <option>Category</option>
+                    <!-- <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option> -->
+                  </select>
+                  <span class="carimg_br12"><img src="<?php echo HTTP_ROOT;?>/img/caret.png"></span>
+                </div>
+                <div class="form-group mrg_btm">
+                  <select class="form-control crt_br" id="select">
+                    <option>Location</option>
+                    <!-- <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option> -->
+                  </select>
+                  <span class="carimg_br12"><img src="<?php echo HTTP_ROOT;?>/img/caret.png"></span>
+                </div>
+                <div class="form-group">
+                  <div class="sm-12 xs-12 butt_pos">
+                    <a href="#" class="btn btn-success buutt_cancel">Cancel</a>
+                    <a href="#" class="btn btn-success buutt_ok">Ok</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12 fldv1 padd_l_r sort_by_br786"> 
+                <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+                  <div class="col-md-12 col-sm-12 col-xs-12 fltrdv">
+                    <div class="filter_br">
+                      Sort By
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 padd-l_r list_filter">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <p class="price_br">Price</p>
+                    </div>
+                    <form role="form">
+                      <div class="row">
+                        <label class="radio-inline">
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                          <span class="hghlow">Highest to Lowest</span>
+                        </label>
+                        <label class="radio-inline radpos">
+                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                          <span class="hghlow">Lowest to Highest</span>
+                        </label>
+                      </div>  
+                    </form>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <p class="price_br">Class</p>
+                    </div>
+                    <div class="form-group b_1_radio">
+                      <form role="form">
+                        <div class="row">
+                          <label class="radio-inline">
+                            <!-- <input type="radio" name="gender" value="male" checked> -->
+                              <input type="radio" name="optradio">
+                              <span class="hghlow">Upcoming</span>
+                          </label>
+                          <label class="radio-inline newly_add">
+                            <!-- <input type="radio" name="gender" value="male" checked> -->
+                            <input type="radio" name="optradio">
+                            <span class="hghlow">Newly Added</span>
+                          </label>
+                        </div>  
+                      </form> 
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <p class="price_br">Location</p>
+                    </div>
+                    <div role="form">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">
+                          <span class="closest">Closest to Farthest</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group tp_br786">
+                      <div class="sm-12 xs-12 butt_pos">
+                        <a href="#" class="btn btn-success buutt_cancel">Cancel</a>
+                        <a href="#" class="btn btn-success buutt_ok">Ok</a>
+                      </div>
+                    </div>
+                  </div>  
+                </div>                
+              </div>  
+            </div>
+            <!-- **************form update*********** -->
+            <!-- images with text code  tab content--> 
+            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 padd_l_r sr_2605_02 tab-content padd_220" style="">
+                <div class="col-md-12 col-sm-12 col-xs-12 fltrdv">
+                  <div class="filter_br">
+                    <?php  $total_class=count ($cataloglist); ?>
+                    <?php echo $total_class; ?> Class listing Found
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 sr_2605_03_padding tab-pane fade  active in list_filter1" id="banking" name="banking">
+
+                      <?php if($total_class==0){ echo "Classes not Exist!"; }  ?>
+
+                      <?php foreach ($cataloglist as $key => $value_catalog) {
+                        
+                          $class_id       = $value_catalog['VendorClasse']['id'];
+                          $user_id        = $value_catalog['VendorClasse']['user_id'];
+                          $class_topic    = $value_catalog['VendorClasse']['class_topic'];
+                          
+                          $class_mod_id   = $value_catalog['VendorClasse']['class_timing_id'];
+                          $class_duration = $value_catalog['VendorClasse']['class_duration'];
+                          $class_summary  = $value_catalog['VendorClasse']['class_summary'];
+                          $location       = $value_catalog['VendorClasse']['location'];
+                          $class_photo    = $value_catalog['VendorClasse']['upload_class_photo'];
+                          $price_per_head = $value_catalog['VendorClasse']['price_per_head'];
+                          $starting_month = $value_catalog['VendorClasse']['starting_month'];
+
+                        if($class_mod_id==1){ 
+                          $class_name_type='Flexible';
+
+                        }else{
+                          $class_name_type='Fixed';
+                        }
+                        $class_id = base64_encode($class_id);
+                      ?>     
+                      <div class="col-sm-12 col-xs-12 sr_260501 padd_l_r"> 
+                            <!-- ********images************ -->
+                            <div class="col-md-4 col-sm-4 col-xs-12 img-responsive padd_l_r">
+                              <div class="col-xs-12 col-sm-12 fun01_img_w">
+                                <?php 
+
+                                //echo $upload_class_photo;
+
+                                if($class_photo=='')
+                                {
+                                    $class_photo='defult_pic.png';
+                                }
+                                ?>
+                                <a href="<?php echo HTTP_ROOT;?>/Homes/weighLoss/<?php echo $this->params->pass[0]; ?>/<?php echo $class_id; ?>"><img src="<?php echo HTTP_ROOT;?>/img/Vendor/class_image/<?php echo $class_photo; ?>.jpg" class="img_res img-responsive img-thumbnail"></a>
+
+                              </div>  
+
+                            </div><!-- ********images************ -->
+                            <!-- ********text************ -->
+                            <div class="col-md-8 col-sm-8 col-xs-12 text_res sr_2605_03_padding status-div" >
+                                                   <div class="col-xs-12 col-sm-12 sr_2605_06 sr_2605_06_textLorem021 sr_pv_padding_lr txt_cntnt">
+                                                      <div class="hathyga up-com-post col-xs-12 col-sm-12 sr_2605_03_padding upcoming-class-title" style="font-weight:bold">
+                                                        <?php echo $value_catalog['VendorClasse']['class_topic'];?>
+                                                      </div>
+                                                      <div class="col-xs-12 col-sm-12 sr_2605_03_padding sr_serch_div_l_hite sr_class_acc_div padd_l_r" style="margin-bottom:7px;">
+
+                                                        <div class="row">
+                                                          <div class="col-md-2 col-sm-2 col-xs-2 upcom-img-class">
+                                                            <img class="img-responsive" style="display: inline; margin-right: 5px;" src="<?php echo HTTP_ROOT;?>/img/fun&refreshment/location.png">
+                                                          </div>
+                                                          <div class="col-md-10 col-sm-10 col-xs-10 sr_class_acc_text02 upclass-location">
+                                                              <?php echo $value_catalog['VendorClasseLocationDetail'][0]['Locality']['name'];?>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-xs-12 col-sm-12 sr_2605_03_padding sr_serch_div_l_hite sr_class_acc_div padd_l_r" style="margin-bottom:7px;">
+                                                        <div class="row">
+                                                          <div class="col-md-2 col-sm-2 col-xs-2 upcom-img-class">
+                                                            <img class="img-responsive" style="display: inline; margin-right: 5px;" src="<?php echo HTTP_ROOT;?>/img/fun&refreshment/user.png">
+                                                          </div>
+                                                          <div class="col-md-10 col-sm-10 col-xs-10 sr_class_acc_text02 upclass-location">
+                                                          <?php if($value_catalog['UserMaster']['vendor_type_id']=='1'){?>  
+                                                          <strong> By :</strong> <?php echo ucfirst($value_catalog['UserMaster']['institute_name']);?>
+                                                          <?php }else{?>
+                                                          <strong> By :</strong> <?php echo ucfirst($value_catalog['UserMaster']['first_name']);?>
+                                                          <?php }?>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-xs-12 col-sm-12 sr_2605_03_padding sr_serch_div_l_hite sr_class_acc_div padd_l_r" style="margin-bottom:7px;">
+                                                        <div class="row">
+                                                          <div class="col-md-2 col-sm-2 col-xs-2 upcom-img-class">
+                                                            <img class="img-responsive" style="display: inline; margin-right: 5px;" src="<?php echo HTTP_ROOT;?>/img/fun&refreshment/session.png">
+                                                          </div>
+                                                          <div class="col-md-10 col-sm-10 col-xs-10 sr_class_acc_text02 upclass-location">
+                                                          <strong><?php echo ucfirst($value_catalog['VendorClasse']['no_of_session']);?></strong>&nbsp;Session
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                     
+                                                      <div class="col-xs-12 col-sm-12  sr_2605_06_textLorem sr_serch_div_l_hite sr_class_acc_div padd_l_r" style="margin-bottom:7px;">
+                                                        <div class="row">
+                                                          <div class="col-md-2 col-sm-2 col-xs-2 upcom-img-class">
+                                                            <img class="img-responsive" style="display: inline; margin-right: 5px;" src="<?php echo HTTP_ROOT;?>/img/fun&refreshment/information.png">
+                                                          </div>
+                                                            <div class="col-md-10 col-sm-10 col-xs-10 sr_class_acc_text02 up-com-post-text upclass-location">
+                                                              <?php echo substr($value_catalog['VendorClasse']['class_summary'], 0, 150),".......";?>
+                                                            </div>
+                                                          </div>
+                                                      </div>
+                                                      
+                            </div>    
+                                                 
+                            <!-- ********text************ -->
+                      </div> 
+                    <?php } ?>  
+                  <center class="white_bg">
+                    <style type="text/css">
+                    </style>
+
+                    <?php if($total_class=='y'){ ?>
+                                       
+                    <?php } ?>
+                  </center>
+                </div>
+            </div>
+        </div>  
+          <!-- images with text code / --> 
+                 
+        </div>
+       </div> 
+      <div class="col-md-12 col-sm-12 col-xs-12 funtr"> 
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padd_l_r">
+          <h4 class="feature_work">Recommended Classes</h4>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12" style="border:2px solid #00CDC6;"></div> 
+          <!-- slider code -->
+          <div class=" col-md-12 col-sm-12 col-xs-12 pad_all funsld">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+              <div class="row slide3_row1">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div id="testimonials" class="container-fluid">
+                     
+
+                        <div class="row">
+
+                      <div class="C_17_num">
+                        <div id="grid-contant-slider2" class="b_sld">
+                        <?php 
+              foreach($recommended_class as $result){
+                if(!empty($result['VendorClasse']['segment_id'])):
+                                            $seg_pic = explode(',',$result['VendorClasse']['segment_id']);
+                                          endif;
+                                          $class_id = base64_encode($result['VendorClasse']['id']);
+            ?>
+                            <div class="item b_1_crs featured" id="<?php echo $result['VendorClasse']['id'];?>">
+                                    <li>
+                                    <div class="grid1 gridfreeclassesbg grid-slider-image">
+                                    <div class="view3 view-first">
+                                    <div class="index_img">
+                                      <?php 
+                                                  if(!empty($result['VendorClasse']['upload_class_photo'])){
+                                                    
+                          echo $this->Html->link($this->Html->image('Vendor/class_image/'.$result['VendorClasse']['upload_class_photo'].'.jpg', array('class' => 'imgresponsive img-thumbnail')),array('controller'=>'Vendor_classes','action'=>'classes',$class_id),array('escape' => false));
+                                                                               
+                                                 }else{
+                        $seg_pic = explode(',',$result['VendorClasse']['segment_id']);
+                              echo $this->Html->link($this->Html->image('Vendor/'.$result['VendorClasse']['category_id'].'/'.$seg_pic[0].'/defult_pic.jpg', array('class' => 'imgresponsive img-thumbnail')), array('controller'=>'Vendor_classes','action'=>'classes',$class_id), array('escape' => false));
+                                    }
+      
+ ?>
+                                    </div>                
+                                    </div>                
+                                    <div class="golden home-tumb-slide">
+                                    <div class="slider-topic12">
+                                    <?php 
+                  if(!empty($result['VendorClasse'])):
+                    echo substr($result['VendorClasse']['class_topic'],0,25);
+                  endif;
+                  ?>
+                                    </div>
+                                    <div class="provider-by" style="color:black !important; margin-bottom:2px !important;">
+                                    <strong>By:</strong>
+                                    <?php 
+                  if(!empty($result['User'])):
+                    if($result['User']['vendor_type_id'] ==1):
+                      echo $result['User']['institute_name'];
+                    else:
+                      echo $result['User']['first_name'].' '.$result['User']['last_name'];
+                    endif;
+                  endif;
+                  ?>
+                                    </div>
+                                    <div class="indx-address">Place :<?php 
+                  if(!empty($result['VendorClasseLocationDetail'])):
+                    echo $result['VendorClasseLocationDetail'][0]['Locality']['name'];
+                  else:
+                    echo 'NA';
+                  endif;
+                  ?></div>
+                                    <h5>No of Session:&nbsp;<?php 
+                  if(!empty($result['VendorClasse']['no_of_session'])):
+                  echo $result['VendorClasse']['no_of_session'];
+                  endif; ?> </h5>
+                                    <h5>Duration:&nbsp;<?php 
+                  if(!empty($result['VendorClasse']['class_duration'])):
+                  echo $result['VendorClasse']['class_duration'];
+                  endif; ?> </h5>
+                                    </div>
+                                    </div>
+                                    </li>
+                                    </div>
+                          <?php } ?>
+                          
+                          
+                                  
+                        </div>                                       
+                      </div>
+
+                    </div>
+                  </div>        
+                </div>
+              </div>
+            </div>        
+          </div>
+          <!-- slider code / -->    
+          <div class="col-md-12 col-sm-12 col-xs-12 sr_0106_div_a_class padd_l_r white_line"> 
+              <a href="#" class="btn btn-default btn-lg btn-block sr_0106_gift_a_class">
+                <i class="fa fa-gift gft_fa_br" aria-hidden="true"></i>
+                <span class="ngo-gift">Gift A Class</span>
+              </a>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 banner_gift">
+            <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10">
+              <div class="indvdl_gifting">
+                <div><a href="#" class="btn btn-default indvdl_butt">
+                  <i class="fa fa-gift gft_fa" aria-hidden="true"></i>
+                  <span class="ngo-top">Individual Gifting</span></a>
+                </div>
+                <div class="ngo_gift"><a href="#" class="btn btn-default ngo_butt">
+                  <i class="fa fa-gift gft_fa" aria-hidden="true"></i>
+                  <span class="ngo-top">NGO Gifting</span></a>
+                </div>
+                <div class="ngo_gift"><a href="#" class="btn btn-default crprt_butt">
+                  <i class="fa fa-gift gft_fa" aria-hidden="true"></i>
+                  <span class="ngo-top">Corporate Gifting</span></a>
+                </div>
+            </div>
+            </div>
+          </div>
+      </div>
+     </div> 
+  </div>
+      

@@ -1,0 +1,181 @@
+<!-- <div class="col-md-12 col-sm-12 col-xs-12 single-slide_br banner_six">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <center>
+        <a href="#" class="more_vw">And Many More</a>
+      </center>
+    </div>
+</div> -->
+<style type="text/css">
+  .two_seg{border-bottom:1px solid #00c3c1;}
+</style>
+<div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+  <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r">
+    
+      <img src="<?php echo HTTP_ROOT;?>/img/profile_img/explore_ban.jpeg" class="img-responsive" alt="">
+   
+  </div>
+</div>  
+<div class="col-xs-12 col-sm-12  col-md-12 col-lg-offset-1 col-lg-10" >
+          <div class="container-fluid  padd_l_r" style="">            
+<div class="col-md-12 col-sm-12 col-xs-12" style="">  </div>   
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r br_srch_act">
+            <div class="col-md-7 col-sm-7 col-xs-6 left-box-content">
+                <div class="col-md-4 col-sm-3 col-xs-12 padd_l_r find-near-div find-near-field">
+                  <center>
+                    <img class="globgreen" src="<?php echo HTTP_ROOT?>/img/glob.png">
+                    <img class="globblack" src="<?php echo HTTP_ROOT?>/img/globblack.png">
+                    <span>Find classes near by you </span>
+                   </center>
+                    <hr class="near-border nearr-border active">
+                    <center>
+                      <img class="caret-border-img" src="<?php echo HTTP_ROOT;?>/img/caret.png">
+                    </center>
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 padd_l_r find-people-near-div find-people-near find-near-field ">
+                  <center>
+                    <img class="handblack" src="<?php echo HTTP_ROOT?>/img/handblack.png">
+                    <img class="handgreen" src="<?php echo HTTP_ROOT?>/img/handgreen.png">
+                    <span>Find people near by you </span>
+                  </center>
+                  <hr class="near-border near-border1 nearr-border1">
+                  <center>
+                    <img class="caret-border-img1" src="<?php echo HTTP_ROOT;?>/img/caret.png">
+                  </center>
+                </div> 
+                 <div class="col-md-4 col-sm-4 col-xs-12 padd_l_r find-people-near find-people-near-div-last find-near-field">
+                  <center>
+                    <img class="manblack" src="<?php echo HTTP_ROOT?>/img/manblack.png">
+                    <img class="mangreen" src="<?php echo HTTP_ROOT?>/img/mangreen.png">
+                    <span>   Find groups near by you </span>
+                   </center>
+                  <hr class="near-border nearr-border2">
+                  <center>
+                    <img class="caret-border-img2" src="<?php echo HTTP_ROOT;?>/img/caret.png">
+                  </center>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-6 padd_l_r search-box-content">
+              <div class="input-group srch_adon_brd">
+                <input type="text" class="form-control br_inpt_radius" placeholder="Search for short classes &  activities">
+                <span class="input-group-btn">
+                  <button class="btn btn-default br_inpt_radius srch_adon" type="button">Search</button>
+                </span>
+              </div>
+            </div>  
+          </div>  
+          <!-- Furry Teddy Bear -->
+
+          <!-- *************tab head*************** -->
+          
+          <div class="col-md-12 col-sm-12 col-xs-12 tab_head sr_2605_03_padding nav nav-tabs list_220 padd_l_r" style="">
+            <div class="col-xs-12 col-sm-12 sr_2605_03_padding padd_l_r">
+              <div class="col-md-2 col-sm-2 col-xs-3 rec_health padd_l_r one_seg12">EXPLORE
+              </div>
+              <div class="col-md-10 col-sm-10 col-xs-9 sr_2605_03_padding  sr_2705_bdr3 one_seg12 padd_l_r">
+
+              
+                    <div class="row">
+                      <?php foreach ($category as  $res) {
+                      ?>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 padd_l_r two_seg seg_brd_tp_class_segment" style="background-color:<?php echo $res['Category']['color_code'];?>">
+                        <a href="<?php echo HTTP_ROOT;?>/homes/explore/<?php echo $res['Category']['id'];?>"><?php echo $res['Category']['category_name']; ?></a>
+                      </div> 
+                      <?php 
+                      }
+                      ?>    
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 padd_l_r br_srch_act">
+            <div class="col-md-3 col-sm-3 col-xs-12  padd_l_r location-box-seerch" >
+              <form class="form-search" method="post" id="s" action="/">
+                <div class="input-append">
+                    <input type="text" class="input-medium search-query-box" name="s" placeholder="Search" value="">
+                    <input type="hidden" name="submit" value="submit">
+                </div>
+            </form>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 change-box-btn">
+              <button type="button" class="btn btn-success locality-button"><span>Change Locality & Search</span></button>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12 yes-box-seerch" style="padding-right:0px;">
+              <form class="form-search" method="post" id="s" action="/">
+                <div class="input-append">
+                    <input type="text" class="input-medium yes-query-box" name="s" placeholder="Yes" value="">
+                    <input type="hidden" name="submit" value="submit">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 gps-box-div">
+              <button type="button" class="btn btn-success locality-button"><span>Use GPS to Set exact Location & Search</span></button>
+            </div>
+          </div>
+          <!-- *************tab head*************** -->
+         
+        
+         <div class="col-md-12 col-sm-12 col-xs-12 "> &nbsp; </div>
+         
+          <!-- google map code -->
+
+          <div class="col-md-12 col-sm-12 col-xs-12 sr_2605_03 padd_l_r"> 
+              <div id="googleMap" class="google-map-div" style="width:100%;height:600px;"></div>
+          </div> 
+          <div class="col-md-12 col-sm-12 col-xs-12 "> &nbsp; </div>
+          <!-- google map code / -->
+          <!-- <div class="col-md-12 col-sm-12 col-xs-12 sr_0106_div_a_class"> 
+              <center><button type="botton" class="btn btn-primary sr_0106_gift_a_class">Gift A Class</button></center>
+          </div> -->
+        
+          </div>
+        </div>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&key=AIzaSyBTWFXzW0kk-GOyASPoip3CXq02xbhr_z4"></script> 
+ <script>
+ $(document).ready(function(){
+  //alert('hii');
+  getLocation();
+});
+ </script>
+ <script>
+ function getLocation() {
+     
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+       
+    } else { 
+         //alert('hii');
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+  
+   var latitude =position.coords.latitude;
+   var longitude=position.coords.longitude;
+    
+    }
+var myCenter=new google.maps.LatLng(13.1339078, 80.2253037);
+var marker;
+            function initialize() {
+               var mapProp = {
+  center:myCenter,
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  animation:google.maps.Animation.BOUNCE
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+             
+        </script>
+
+
